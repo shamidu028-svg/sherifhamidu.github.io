@@ -1,13 +1,13 @@
 ---
-title: "Your Name"
+title: "Sherif Hamidu"
 toc: false
-image: "your photo.jpg"
+image: "Sherif11.jpg"
 about:
   template: trestles
   links:
   - text: GitHub
-    href: link
-  - text: email
+    href: sherifhamidu.github.io
+  - text: shamidu028@gmail.com
     href:  link
 ---
 
@@ -21,10 +21,10 @@ Welcome to my research profile website. I'm a student in the Intro to Reproducib
 
 Replace this section with information about yourself:
 
-- **Name:** Your Name Here
-- **Institution:** Your University
-- **Research Interests:** Add your research interests here
-- **Email:** your.email@university.edu
+- **Name:** Sherif Hamidu
+- **Institution:** University of Oklahoma Health Campus
+- **Research Interests:** Diabetes, Diabetic Retinopathy, Ceramide, Stem Cell biology, Aging, Cancer
+- **Email:** Sherif-Hamidu@ou.edu
 
 ## My Research
 

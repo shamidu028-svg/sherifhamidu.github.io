@@ -9,6 +9,7 @@ Here are my research projects and work:
 ## Final Report
 
 My final project for CELL 6351 - Intro to Reproducible Data Analysis Using R.
+Diabetes is associated with abnormalities in glucose metabolism, lipid metabolism, and kidney function, all of which contribute to disease progression and complications. This project will investigate the relationship between HbA1c, lipid profile, and kidney function markers across different diabetes classifications using a publicly available dataset. Through descriptive statistics, data visualization, correlation analysis, and regression modeling, the study aims to identify patterns between glycemic control, dyslipidemia, and kidney function that may improve our understanding of metabolic changes associated with diabetes.
 
 [**View Final Report** →](projects/final-report.qmd)
 
