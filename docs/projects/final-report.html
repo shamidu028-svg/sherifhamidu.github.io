@@ -9,7 +9,7 @@
 <meta name="author" content="Sherif Hamidu">
 <meta name="dcterms.date" content="2026-06-04">
 
-<title>Final Report: [Your Project Title] – My Research Profile</title>
+<title>Final Report: [Diabetes: Association Between Glycemic Control, Lipid Profile, and Kidney Function Across Diabetes Classifications] – My Research Profile</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -159,18 +159,61 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#final-report-your-project-title" id="toc-final-report-your-project-title" class="nav-link active" data-scroll-target="#final-report-your-project-title">Final Report: [Your Project Title]</a>
+  <li><a href="#final-report-diabetes-association-between-glycemic-control-lipid-profile-and-kidney-function-across-diabetes-classifications" id="toc-final-report-diabetes-association-between-glycemic-control-lipid-profile-and-kidney-function-across-diabetes-classifications" class="nav-link active" data-scroll-target="#final-report-diabetes-association-between-glycemic-control-lipid-profile-and-kidney-function-across-diabetes-classifications"><span class="header-section-number">1</span> Final Report: [Diabetes: Association Between Glycemic Control, Lipid Profile, and Kidney Function Across Diabetes Classifications]</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1.1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#example-code-block" id="toc-example-code-block" class="nav-link" data-scroll-target="#example-code-block">Example Code Block</a></li>
-  <li><a href="#example-table" id="toc-example-table" class="nav-link" data-scroll-target="#example-table">Example Table</a></li>
+  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question"><span class="header-section-number">1.1.1</span> Research Question</a></li>
+  <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis"><span class="header-section-number">1.1.2</span> Hypothesis</a></li>
   </ul></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">1.2</span> Methods</a>
+  <ul class="collapse">
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source"><span class="header-section-number">1.2.1</span> Data Source</a></li>
+  <li><a href="#data-inspection" id="toc-data-inspection" class="nav-link" data-scroll-target="#data-inspection"><span class="header-section-number">1.2.2</span> Data Inspection</a></li>
+  <li><a href="#missing-value-assessment" id="toc-missing-value-assessment" class="nav-link" data-scroll-target="#missing-value-assessment"><span class="header-section-number">1.2.3</span> Missing Value Assessment</a></li>
+  <li><a href="#variables-included-in-this-study" id="toc-variables-included-in-this-study" class="nav-link" data-scroll-target="#variables-included-in-this-study"><span class="header-section-number">1.2.4</span> Variables Included in this Study</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation"><span class="header-section-number">1.2.5</span> Data Preparation</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">1.3</span> Results</a></li>
+  </ul></li>
+  <li><a href="#research-question-1" id="toc-research-question-1" class="nav-link" data-scroll-target="#research-question-1"><span class="header-section-number">2</span> Research Question 1</a>
+  <ul class="collapse">
+  <li><a href="#does-glycemic-control-hba1c-differ-across-diabetes-classifications" id="toc-does-glycemic-control-hba1c-differ-across-diabetes-classifications" class="nav-link" data-scroll-target="#does-glycemic-control-hba1c-differ-across-diabetes-classifications"><span class="header-section-number">2.1</span> Does glycemic control (HbA1c) differ across diabetes classifications?</a>
+  <ul class="collapse">
+  <li><a href="#distribution-of-hba1c" id="toc-distribution-of-hba1c" class="nav-link" data-scroll-target="#distribution-of-hba1c"><span class="header-section-number">2.1.1</span> Distribution of HbA1c</a></li>
+  <li><a href="#hba1c-across-diabetes-classifications" id="toc-hba1c-across-diabetes-classifications" class="nav-link" data-scroll-target="#hba1c-across-diabetes-classifications"><span class="header-section-number">2.1.2</span> HbA1c Across Diabetes Classifications</a></li>
+  <li><a href="#statistical-comparison-of-hba1c-across-diabetes-classifications" id="toc-statistical-comparison-of-hba1c-across-diabetes-classifications" class="nav-link" data-scroll-target="#statistical-comparison-of-hba1c-across-diabetes-classifications"><span class="header-section-number">2.1.3</span> Statistical Comparison of HbA1c Across Diabetes Classifications</a></li>
+  </ul></li>
+  <li><a href="#correlation-between-hba1c-and-lipid-biomarkers" id="toc-correlation-between-hba1c-and-lipid-biomarkers" class="nav-link" data-scroll-target="#correlation-between-hba1c-and-lipid-biomarkers"><span class="header-section-number">2.2</span> Correlation Between HbA1c and Lipid Biomarkers</a></li>
+  <li><a href="#relationship-between-hba1c-and-individual-lipid-markers" id="toc-relationship-between-hba1c-and-individual-lipid-markers" class="nav-link" data-scroll-target="#relationship-between-hba1c-and-individual-lipid-markers"><span class="header-section-number">2.3</span> Relationship Between HbA1c and Individual Lipid Markers</a></li>
+  <li><a href="#hba1c-and-total-cholesterol" id="toc-hba1c-and-total-cholesterol" class="nav-link" data-scroll-target="#hba1c-and-total-cholesterol"><span class="header-section-number">2.4</span> HbA1c and Total Cholesterol</a></li>
+  <li><a href="#hba1c-and-triglycerides" id="toc-hba1c-and-triglycerides" class="nav-link" data-scroll-target="#hba1c-and-triglycerides"><span class="header-section-number">2.5</span> HbA1c and Triglycerides</a></li>
+  <li><a href="#hba1c-and-hdl" id="toc-hba1c-and-hdl" class="nav-link" data-scroll-target="#hba1c-and-hdl"><span class="header-section-number">2.6</span> HbA1c and HDL</a></li>
+  <li><a href="#hba1c-and-ldl" id="toc-hba1c-and-ldl" class="nav-link" data-scroll-target="#hba1c-and-ldl"><span class="header-section-number">2.7</span> HbA1c and LDL</a></li>
+  <li><a href="#hba1c-and-vldl" id="toc-hba1c-and-vldl" class="nav-link" data-scroll-target="#hba1c-and-vldl"><span class="header-section-number">2.8</span> HbA1c and VLDL</a></li>
+  <li><a href="#combined-lipid-profile-visualization" id="toc-combined-lipid-profile-visualization" class="nav-link" data-scroll-target="#combined-lipid-profile-visualization"><span class="header-section-number">2.9</span> Combined Lipid Profile Visualization</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">2.10</span> Interpretation</a></li>
+  </ul></li>
+  <li><a href="#research-question-3" id="toc-research-question-3" class="nav-link" data-scroll-target="#research-question-3"><span class="header-section-number">3</span> Research Question 3</a>
+  <ul class="collapse">
+  <li><a href="#is-hba1c-associated-with-kidney-function" id="toc-is-hba1c-associated-with-kidney-function" class="nav-link" data-scroll-target="#is-hba1c-associated-with-kidney-function"><span class="header-section-number">3.1</span> Is HbA1c associated with kidney function?</a></li>
+  <li><a href="#relationship-between-hba1c-and-kidney-function-biomarkers" id="toc-relationship-between-hba1c-and-kidney-function-biomarkers" class="nav-link" data-scroll-target="#relationship-between-hba1c-and-kidney-function-biomarkers"><span class="header-section-number">3.2</span> Relationship Between HbA1c and Kidney Function Biomarkers</a></li>
+  <li><a href="#hba1c-and-urea" id="toc-hba1c-and-urea" class="nav-link" data-scroll-target="#hba1c-and-urea"><span class="header-section-number">3.3</span> HbA1c and Urea</a></li>
+  <li><a href="#hba1c-and-creatinine" id="toc-hba1c-and-creatinine" class="nav-link" data-scroll-target="#hba1c-and-creatinine"><span class="header-section-number">3.4</span> HbA1c and Creatinine</a></li>
+  <li><a href="#combined-kidney-function-visualization" id="toc-combined-kidney-function-visualization" class="nav-link" data-scroll-target="#combined-kidney-function-visualization"><span class="header-section-number">3.5</span> Combined Kidney Function Visualization</a></li>
+  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1"><span class="header-section-number">3.6</span> Interpretation</a></li>
+  </ul></li>
+  <li><a href="#research-question-4" id="toc-research-question-4" class="nav-link" data-scroll-target="#research-question-4"><span class="header-section-number">4</span> Research Question 4</a>
+  <ul class="collapse">
+  <li><a href="#can-lipid-profile-and-kidney-function-biomarkers-predict-hba1c-levels" id="toc-can-lipid-profile-and-kidney-function-biomarkers-predict-hba1c-levels" class="nav-link" data-scroll-target="#can-lipid-profile-and-kidney-function-biomarkers-predict-hba1c-levels"><span class="header-section-number">4.1</span> Can lipid profile and kidney function biomarkers predict HbA1c levels?</a></li>
+  <li><a href="#multiple-linear-regression-model" id="toc-multiple-linear-regression-model" class="nav-link" data-scroll-target="#multiple-linear-regression-model"><span class="header-section-number">4.2</span> Multiple Linear Regression Model</a></li>
+  <li><a href="#regression-model-interpretation" id="toc-regression-model-interpretation" class="nav-link" data-scroll-target="#regression-model-interpretation"><span class="header-section-number">4.3</span> Regression Model Interpretation</a>
+  <ul class="collapse">
+  <li><a href="#model-fit" id="toc-model-fit" class="nav-link" data-scroll-target="#model-fit"><span class="header-section-number">4.3.1</span> Model Fit</a></li>
+  <li><a href="#predictor-contributions" id="toc-predictor-contributions" class="nav-link" data-scroll-target="#predictor-contributions"><span class="header-section-number">4.3.2</span> Predictor Contributions</a></li>
+  </ul></li>
+  <li><a href="#summary-of-predictive-analysis" id="toc-summary-of-predictive-analysis" class="nav-link" data-scroll-target="#summary-of-predictive-analysis"><span class="header-section-number">4.4</span> Summary of Predictive Analysis</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.5</span> References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -180,7 +223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Final Report: [Your Project Title]</h1>
+<h1 class="title">Final Report: [Diabetes: Association Between Glycemic Control, Lipid Profile, and Kidney Function Across Diabetes Classifications]</h1>
 </div>
 
 
@@ -209,86 +252,987 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="final-report-your-project-title" class="level1">
-<h1>Final Report: [Your Project Title]</h1>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Replace this with an introduction to your research question or project. What are you investigating? Why does it matter?</p>
+<section id="final-report-diabetes-association-between-glycemic-control-lipid-profile-and-kidney-function-across-diabetes-classifications" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Final Report: [Diabetes: Association Between Glycemic Control, Lipid Profile, and Kidney Function Across Diabetes Classifications]</h1>
+<section id="introduction" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
+<p>Diabetes mellitus is a chronic metabolic disorder characterized by persistent hyperglycemia that can lead to both macrovascular and microvascular complications. Glycated hemoglobin (HbA1c) is the standard clinical marker used to assess long-term glycemic control and is associated with the risk of diabetes-related complications. Poor glycemic control has been linked to abnormalities in lipid metabolism, including elevated cholesterol, triglycerides, and low-density lipoprotein (LDL), as well as reduced high-density lipoprotein (HDL). These metabolic disturbances contribute to cardiovascular disease, the leading cause of morbidity among individuals with diabetes.</p>
+<p>Diabetes also affects kidney function, with elevated serum urea and creatinine serving as indicators of renal impairment. Understanding how glycemic control relates to lipid abnormalities and kidney function across different diabetes classifications may help identify patients at greater risk of complications.</p>
+<p>This study investigates the association between HbA1c, lipid profile, and kidney function across diabetes classifications.</p>
+<section id="research-question" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="research-question"><span class="header-section-number">1.1.1</span> Research Question</h3>
+<p>How are HbA1c levels associated with lipid profile and kidney function across different diabetes classifications?</p>
 </section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<p>Describe how you conducted your analysis. What data did you use? What analyses did you perform?</p>
+<section id="hypothesis" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="hypothesis"><span class="header-section-number">1.1.2</span> Hypothesis</h3>
+<p>Individuals with poorer glycemic control (higher HbA1c) will have a more adverse lipid profile and poorer kidney function, and these relationships will differ among diabetes classifications.</p>
 </section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>Share your findings here. You can include:</p>
-<ul>
-<li>Text explanations</li>
-<li>Tables</li>
-<li>Figures and visualizations</li>
-<li>Code examples (if relevant)</li>
-</ul>
-<section id="example-code-block" class="level3">
-<h3 class="anchored" data-anchor-id="example-code-block">Example Code Block</h3>
-<p>Here’s a sample R code block:</p>
+</section>
+<section id="methods" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="methods"><span class="header-section-number">1.2</span> Methods</h2>
+<section id="data-source" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="data-source"><span class="header-section-number">1.2.1</span> Data Source</h3>
+<p>The dataset consists of clinical measurements obtained from individuals representing different diabetes classifications. Variables include glycemic control (HbA1c), lipid profile biomarkers (total cholesterol, triglycerides, HDL, LDL, and VLDL), and kidney function biomarkers (urea and creatinine). These variables were analyzed to investigate the relationship between glycemic control, lipid metabolism, and kidney function.</p>
+<p>###Software</p>
+<p>All analyses were performed in R using Quarto for reproducible reporting.</p>
+<p>Load Required Packages</p>
+<p>The following R packages were used for data manipulation, visualization, and statistical analysis.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a library</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Install packages</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("tidyverse")</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("ggpubr")</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("corrplot")</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("psych")</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("GGally")</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tidyverse' was built under R version 4.6.1</code></pre>
+</div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'ggplot2' was built under R version 4.6.1</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create some sample data</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a plot</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="final-report_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tidyr' was built under R version 4.6.1</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'readr' was built under R version 4.6.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'purrr' was built under R version 4.6.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'stringr' was built under R version 4.6.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'forcats' was built under R version 4.6.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'lubridate' was built under R version 4.6.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggpubr' was built under R version 4.6.1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'corrplot' was built under R version 4.6.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>corrplot 0.95 loaded</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'psych' was built under R version 4.6.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'psych'
+
+The following objects are masked from 'package:ggplot2':
+
+    %+%, alpha</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'GGally' was built under R version 4.6.1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Import the Dataset</p>
+<p>The diabetes dataset was imported into R and inspected to verify that it was read correctly.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/shami/Documents/sherifhamidu.github.io/projects"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Dataset of Diabetes .csv" "final-report.qmd"        
+[3] "final-report.rmarkdown"  </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>Diabetes <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Dataset of Diabetes .csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="data-inspection" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="data-inspection"><span class="header-section-number">1.2.2</span> Data Inspection</h3>
+<p>The structure of the dataset was explored to understand the available variables, their data types, and the overall dimensions of the dataset.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(Diabetes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,000
+Columns: 14
+$ ID        &lt;int&gt; 502, 735, 420, 680, 504, 634, 721, 421, 670, 759, 636, 788, …
+$ No_Pation &lt;int&gt; 17975, 34221, 47975, 87656, 34223, 34224, 34225, 34227, 3422…
+$ Gender    &lt;chr&gt; "F", "M", "F", "F", "M", "F", "F", "M", "M", "F", "F", "F", …
+$ AGE       &lt;int&gt; 50, 26, 50, 50, 33, 45, 50, 48, 43, 32, 31, 33, 30, 45, 50, …
+$ Urea      &lt;dbl&gt; 4.7, 4.5, 4.7, 4.7, 7.1, 2.3, 2.0, 4.7, 2.6, 3.6, 4.4, 3.3, …
+$ Cr        &lt;int&gt; 46, 62, 46, 46, 46, 24, 50, 47, 67, 28, 55, 53, 42, 54, 39, …
+$ HbA1c     &lt;dbl&gt; 4.9, 4.9, 4.9, 4.9, 4.9, 4.0, 4.0, 4.0, 4.0, 4.0, 4.2, 4.0, …
+$ Chol      &lt;dbl&gt; 4.2, 3.7, 4.2, 4.2, 4.9, 2.9, 3.6, 2.9, 3.8, 3.8, 3.6, 4.0, …
+$ TG        &lt;dbl&gt; 0.9, 1.4, 0.9, 0.9, 1.0, 1.0, 1.3, 0.8, 0.9, 2.0, 0.7, 1.1, …
+$ HDL       &lt;dbl&gt; 2.4, 1.1, 2.4, 2.4, 0.8, 1.0, 0.9, 0.9, 2.4, 2.4, 1.7, 0.9, …
+$ LDL       &lt;dbl&gt; 1.4, 2.1, 1.4, 1.4, 2.0, 1.5, 2.1, 1.6, 3.7, 3.8, 1.6, 2.7, …
+$ VLDL      &lt;dbl&gt; 0.5, 0.6, 0.5, 0.5, 0.4, 0.4, 0.6, 0.4, 1.0, 1.0, 0.3, 1.0, …
+$ BMI       &lt;dbl&gt; 24, 23, 24, 24, 21, 21, 24, 24, 21, 24, 23, 21, 22, 23, 24, …
+$ CLASS     &lt;chr&gt; "N", "N", "N", "N", "N", "N", "N", "N", "N", "N", "N", "N", …</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Diabetes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   ID No_Pation Gender AGE Urea Cr HbA1c Chol  TG HDL LDL VLDL BMI CLASS
+1 502     17975      F  50  4.7 46   4.9  4.2 0.9 2.4 1.4  0.5  24     N
+2 735     34221      M  26  4.5 62   4.9  3.7 1.4 1.1 2.1  0.6  23     N
+3 420     47975      F  50  4.7 46   4.9  4.2 0.9 2.4 1.4  0.5  24     N
+4 680     87656      F  50  4.7 46   4.9  4.2 0.9 2.4 1.4  0.5  24     N
+5 504     34223      M  33  7.1 46   4.9  4.9 1.0 0.8 2.0  0.4  21     N
+6 634     34224      F  45  2.3 24   4.0  2.9 1.0 1.0 1.5  0.4  21     N</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(Diabetes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   1000 obs. of  14 variables:
+ $ ID       : int  502 735 420 680 504 634 721 421 670 759 ...
+ $ No_Pation: int  17975 34221 47975 87656 34223 34224 34225 34227 34229 34230 ...
+ $ Gender   : chr  "F" "M" "F" "F" ...
+ $ AGE      : int  50 26 50 50 33 45 50 48 43 32 ...
+ $ Urea     : num  4.7 4.5 4.7 4.7 7.1 2.3 2 4.7 2.6 3.6 ...
+ $ Cr       : int  46 62 46 46 46 24 50 47 67 28 ...
+ $ HbA1c    : num  4.9 4.9 4.9 4.9 4.9 4 4 4 4 4 ...
+ $ Chol     : num  4.2 3.7 4.2 4.2 4.9 2.9 3.6 2.9 3.8 3.8 ...
+ $ TG       : num  0.9 1.4 0.9 0.9 1 1 1.3 0.8 0.9 2 ...
+ $ HDL      : num  2.4 1.1 2.4 2.4 0.8 1 0.9 0.9 2.4 2.4 ...
+ $ LDL      : num  1.4 2.1 1.4 1.4 2 1.5 2.1 1.6 3.7 3.8 ...
+ $ VLDL     : num  0.5 0.6 0.5 0.5 0.4 0.4 0.6 0.4 1 1 ...
+ $ BMI      : num  24 23 24 24 21 21 24 24 21 24 ...
+ $ CLASS    : chr  "N" "N" "N" "N" ...</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Diabetes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       ID          No_Pation              Gender          AGE       
+ Min.   :  1.0   Min.   :     123   Length   :1000   Min.   :20.00  
+ 1st Qu.:125.8   1st Qu.:   24064   N.unique :   3   1st Qu.:51.00  
+ Median :300.5   Median :   34396   N.blank  :   0   Median :55.00  
+ Mean   :340.5   Mean   :  270551   Min.nchar:   1   Mean   :53.53  
+ 3rd Qu.:550.2   3rd Qu.:   45384   Max.nchar:   1   3rd Qu.:59.00  
+ Max.   :800.0   Max.   :75435657                    Max.   :79.00  
+      Urea              Cr             HbA1c             Chol       
+ Min.   : 0.500   Min.   :  6.00   Min.   : 0.900   Min.   : 0.000  
+ 1st Qu.: 3.700   1st Qu.: 48.00   1st Qu.: 6.500   1st Qu.: 4.000  
+ Median : 4.600   Median : 60.00   Median : 8.000   Median : 4.800  
+ Mean   : 5.125   Mean   : 68.94   Mean   : 8.281   Mean   : 4.863  
+ 3rd Qu.: 5.700   3rd Qu.: 73.00   3rd Qu.:10.200   3rd Qu.: 5.600  
+ Max.   :38.900   Max.   :800.00   Max.   :16.000   Max.   :10.300  
+       TG             HDL             LDL            VLDL       
+ Min.   : 0.30   Min.   :0.200   Min.   :0.30   Min.   : 0.100  
+ 1st Qu.: 1.50   1st Qu.:0.900   1st Qu.:1.80   1st Qu.: 0.700  
+ Median : 2.00   Median :1.100   Median :2.50   Median : 0.900  
+ Mean   : 2.35   Mean   :1.205   Mean   :2.61   Mean   : 1.855  
+ 3rd Qu.: 2.90   3rd Qu.:1.300   3rd Qu.:3.30   3rd Qu.: 1.500  
+ Max.   :13.80   Max.   :9.900   Max.   :9.90   Max.   :35.000  
+      BMI              CLASS     
+ Min.   :19.00   Length   :1000  
+ 1st Qu.:26.00   N.unique :   3  
+ Median :30.00   N.blank  :   0  
+ Mean   :29.58   Min.nchar:   1  
+ 3rd Qu.:33.00   Max.nchar:   1  
+ Max.   :47.75                   </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(Diabetes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1000   14</code></pre>
 </div>
 </div>
 </section>
-<section id="example-table" class="level3">
-<h3 class="anchored" data-anchor-id="example-table">Example Table</h3>
+<section id="missing-value-assessment" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="missing-value-assessment"><span class="header-section-number">1.2.3</span> Missing Value Assessment</h3>
+<p>Before performing statistical analyses, the dataset was examined for missing values.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(Diabetes))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       ID No_Pation    Gender       AGE      Urea        Cr     HbA1c      Chol 
+        0         0         0         0         0         0         0         0 
+       TG       HDL       LDL      VLDL       BMI     CLASS 
+        0         0         0         0         0         0 </code></pre>
+</div>
+</div>
+<p>A dataset with minimal or no missing values improves the reliability of statistical analyses and visualizations.</p>
+</section>
+<section id="variables-included-in-this-study" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="variables-included-in-this-study"><span class="header-section-number">1.2.4</span> Variables Included in this Study</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Method</th>
-<th>Result</th>
-<th>P-value</th>
+<th>Variable</th>
+<th>Description</th>
+<th>Category</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Analysis 1</td>
-<td>Significant</td>
-<td>0.01</td>
+<td>CLASS</td>
+<td>Diabetes classification</td>
+<td>Grouping variable</td>
 </tr>
 <tr class="even">
-<td>Analysis 2</td>
-<td>Not Significant</td>
-<td>0.15</td>
+<td>HbA1c</td>
+<td>Glycated hemoglobin</td>
+<td>Glycemic control</td>
+</tr>
+<tr class="odd">
+<td>Chol</td>
+<td>Total cholesterol</td>
+<td>Lipid marker</td>
+</tr>
+<tr class="even">
+<td>TG</td>
+<td>Triglycerides</td>
+<td>Lipid marker</td>
+</tr>
+<tr class="odd">
+<td>HDL</td>
+<td>High-density lipoprotein</td>
+<td>Lipid marker</td>
+</tr>
+<tr class="even">
+<td>LDL</td>
+<td>Low-density lipoprotein</td>
+<td>Lipid marker</td>
+</tr>
+<tr class="odd">
+<td>VLDL</td>
+<td>Very low-density lipoprotein</td>
+<td>Lipid marker</td>
+</tr>
+<tr class="even">
+<td>Urea</td>
+<td>Blood urea</td>
+<td>Kidney function</td>
+</tr>
+<tr class="odd">
+<td>Cr</td>
+<td>Serum creatinine</td>
+<td>Kidney function</td>
 </tr>
 </tbody>
 </table>
 </section>
+<section id="data-preparation" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="data-preparation"><span class="header-section-number">1.2.5</span> Data Preparation</h3>
+<p>To simplify subsequent analyses, only the variables relevant to the research question were retained.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>Diabetes_selected <span class="ot">&lt;-</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>Diabetes <span class="sc">%&gt;%</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>CLASS,</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>HbA1c,</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>Chol,</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>TG,</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>HDL,</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>LDL,</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>VLDL,</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>Urea,</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>Cr</span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Diabetes_selected)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  CLASS HbA1c Chol  TG HDL LDL VLDL Urea Cr
+1     N   4.9  4.2 0.9 2.4 1.4  0.5  4.7 46
+2     N   4.9  3.7 1.4 1.1 2.1  0.6  4.5 62
+3     N   4.9  4.2 0.9 2.4 1.4  0.5  4.7 46
+4     N   4.9  4.2 0.9 2.4 1.4  0.5  4.7 46
+5     N   4.9  4.9 1.0 0.8 2.0  0.4  7.1 46
+6     N   4.0  2.9 1.0 1.0 1.5  0.4  2.3 24</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Data Normalization</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="do">###Because the biomarkers are measured on different clinical scales, a normalized dataset was created using Z-score standardization. This preprocessing step allows variables to be compared on the same scale while preserving the original dataset for statistical analyses.</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>Diabetes_normalized <span class="ot">&lt;-</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>Diabetes_selected <span class="sc">%&gt;%</span></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="fu">across</span>(</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>HbA1c<span class="sc">:</span>Cr,</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>scale</span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Diabetes_normalized)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  CLASS     HbA1c        Chol         TG        HDL        LDL       VLDL
+1     N -1.334316 -0.50918099 -1.0345667  1.8098508 -1.0849145 -0.3697730
+2     N -1.334316 -0.89328300 -0.6777236 -0.1586127 -0.4571690 -0.3424774
+3     N -1.334316 -0.50918099 -1.0345667  1.8098508 -1.0849145 -0.3697730
+4     N -1.334316 -0.50918099 -1.0345667  1.8098508 -1.0849145 -0.3697730
+5     N -1.334316  0.02856183 -0.9631980 -0.6128735 -0.5468470 -0.3970685
+6     N -1.689485 -1.50784622 -0.9631980 -0.3100330 -0.9952365 -0.3970685
+        Urea         Cr
+1 -0.1447084 -0.3824806
+2 -0.2128476 -0.1157461
+3 -0.1447084 -0.3824806
+4 -0.1447084 -0.3824806
+5  0.6729627 -0.3824806
+6 -0.9623795 -0.7492405</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="do">###The normalized dataset was created to facilitate comparison across biomarkers. However, all descriptive statistics, visualizations, and statistical analyses presented in this report were performed using the original clinical measurements to preserve clinical interpretability.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
-<p>What do your results mean? How do they relate to your research question? What limitations exist? What would you do next?</p>
 </section>
-<section id="conclusions" class="level2">
-<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
-<p>Summarize your findings and their implications.</p>
+<section id="results" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="results"><span class="header-section-number">1.3</span> Results</h2>
+<p>This section presents the findings of the analyses performed to investigate the relationship between glycemic control (HbA1c), lipid profile, and kidney function across diabetes classifications. The results are organized according to the study’s research questions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Descriptive Statistics</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Before conducting statistical analyses, summary statistics were calculated to describe the distribution of HbA1c, lipid profile markers, and kidney function markers included in this study.</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Descriptive statistics for continuous variables</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span><span class="fu">describe</span>(</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  Diabetes_selected[, <span class="fu">c</span>(<span class="st">"HbA1c"</span>, <span class="st">"Chol"</span>, <span class="st">"TG"</span>, <span class="st">"HDL"</span>, <span class="st">"LDL"</span>, <span class="st">"VLDL"</span>, <span class="st">"Urea"</span>, <span class="st">"Cr"</span>)]</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      vars     n       mean          sd median    trimmed       mad  min    max
+HbA1c   -1 -1000  -8.281160  -2.5340031   -8.0  -8.215575  -2.66868 -0.9  -16.0
+Chol    -2 -1000  -4.862820  -1.3017375   -4.8  -4.799900  -1.18608  0.0  -10.3
+TG      -3 -1000  -2.349610  -1.4011760   -2.0  -2.152763  -1.03782 -0.3  -13.8
+HDL     -4 -1000  -1.204750  -0.6604136   -1.1  -1.115713  -0.29652 -0.2   -9.9
+LDL     -5 -1000  -2.609790  -1.1151017   -2.5  -2.544675  -1.11195 -0.3   -9.9
+VLDL    -6 -1000  -1.854700  -3.6635993   -0.9  -1.055000  -0.44478 -0.1  -35.0
+Urea    -7 -1000  -5.124743  -2.9351654   -4.6  -4.690679  -1.48260 -0.5  -38.9
+Cr      -8 -1000 -68.943000 -59.9847474  -60.0 -60.866250 -17.79120 -6.0 -800.0
+       range       skew    kurtosis          se
+HbA1c  -15.1 -0.2210248   0.2610967 -0.08013221
+Chol   -10.3 -0.6152725  -1.8989297 -0.04116455
+TG     -13.5 -2.2915653 -10.1800201 -0.04430908
+HDL     -9.7 -6.2643642 -62.1806839 -0.02088411
+LDL     -9.6 -1.1424742  -4.2339275 -0.03526261
+VLDL   -34.9 -5.3344040 -33.2655134 -0.11585318
+Urea   -38.4 -4.2860397 -30.2032163 -0.09281808
+Cr    -794.0 -8.4487457 -91.0625474 -1.89688427</code></pre>
+</div>
+</div>
+<p>The descriptive statistics provide an overview of the central tendency, variability, and range of each clinical biomarker. These summaries help identify differences in measurement scales and provide context for the subsequent analyses.</p>
+<hr>
 </section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+</section>
+<section id="research-question-1" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Research Question 1</h1>
+<section id="does-glycemic-control-hba1c-differ-across-diabetes-classifications" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="does-glycemic-control-hba1c-differ-across-diabetes-classifications"><span class="header-section-number">2.1</span> Does glycemic control (HbA1c) differ across diabetes classifications?</h2>
+<p>To answer this question, the distribution of HbA1c was first examined using a histogram. HbA1c values were then compared among diabetes classifications using boxplots. Finally, a one-way Analysis of Variance (ANOVA) was performed to determine whether the observed differences were statistically significant.</p>
+<hr>
+<section id="distribution-of-hba1c" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="distribution-of-hba1c"><span class="header-section-number">2.1.1</span> Distribution of HbA1c</h3>
+<p>The histogram below illustrates the overall distribution of HbA1c values within the study population. Examining the distribution helps determine whether HbA1c is approximately normally distributed or exhibits skewness.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Diabetes,</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(HbA1c)) <span class="sc">+</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">bins =</span> <span class="dv">30</span>,</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"steelblue"</span>,</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"black"</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Figure 1. Distribution of HbA1c"</span>,</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"HbA1c (%)"</span>,</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Frequency"</span></span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="final-report_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong></p>
+<p>The histogram provides an overview of the distribution of HbA1c values in the study population. The shape of the distribution can be used to assess whether HbA1c is approximately normally distributed or skewed, which is useful when interpreting subsequent statistical analyses.</p>
+<hr>
+</section>
+<section id="hba1c-across-diabetes-classifications" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="hba1c-across-diabetes-classifications"><span class="header-section-number">2.1.2</span> HbA1c Across Diabetes Classifications</h3>
+<p>To compare glycemic control among diabetes classifications, HbA1c values were visualized using boxplots.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Diabetes,</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(CLASS,</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>           HbA1c,</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> CLASS)) <span class="sc">+</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Figure 2. HbA1c Across Diabetes Classifications"</span>,</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Diabetes Classification"</span>,</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"HbA1c (%)"</span></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span></span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="final-report_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong></p>
+<p>The boxplots display the median, interquartile range, overall spread, and potential outliers for HbA1c within each diabetes classification. Visual differences between groups suggest whether glycemic control varies among diabetes classifications.</p>
+<hr>
+</section>
+<section id="statistical-comparison-of-hba1c-across-diabetes-classifications" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="statistical-comparison-of-hba1c-across-diabetes-classifications"><span class="header-section-number">2.1.3</span> Statistical Comparison of HbA1c Across Diabetes Classifications</h3>
+<p>A one-way Analysis of Variance (ANOVA) was performed to determine whether the mean HbA1c differed significantly among diabetes classifications.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>anova <span class="ot">&lt;-</span> <span class="fu">aov</span>(</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  HbA1c <span class="sc">~</span> CLASS,</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> Diabetes</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             Df Sum Sq Mean Sq F value Pr(&gt;F)    
+CLASS         2   2002  1000.9   226.1 &lt;2e-16 ***
+Residuals   997   4413     4.4                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>Interpretation</strong></p>
+<p>The ANOVA results indicate whether mean HbA1c differs significantly across diabetes classifications.</p>
+<ul>
+<li>If <strong>p &lt; 0.05</strong>, conclude that HbA1c differs significantly among at least one of the diabetes classifications.</li>
+<li>If <strong>p ≥ 0.05</strong>, conclude that there is no statistically significant difference in HbA1c among the groups.</li>
+</ul>
+<p>These findings provide the foundation for investigating whether differences in glycemic control are associated with alterations in lipid profile and kidney function.</p>
+</section>
+</section>
+<section id="correlation-between-hba1c-and-lipid-biomarkers" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="correlation-between-hba1c-and-lipid-biomarkers"><span class="header-section-number">2.2</span> Correlation Between HbA1c and Lipid Biomarkers</h2>
+<p>A correlation matrix was generated to evaluate the strength and direction of relationships between HbA1c, lipid markers, and kidney function biomarkers.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select variables for correlation analysis</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>corr_data <span class="ot">&lt;-</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>Diabetes <span class="sc">%&gt;%</span></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>HbA1c,</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>Chol,</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>TG,</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>HDL,</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>LDL,</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>VLDL,</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>Urea,</span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>Cr</span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate correlation matrix</span></span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a>cor_matrix <span class="ot">&lt;-</span></span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(corr_data,</span>
+<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
+<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize correlations</span></span>
+<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a><span class="fu">corrplot</span>(</span>
+<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a>cor_matrix,</span>
+<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a><span class="at">method =</span> <span class="st">"color"</span>,</span>
+<span id="cb50-29"><a href="#cb50-29" aria-hidden="true" tabindex="-1"></a><span class="at">type =</span> <span class="st">"upper"</span>,</span>
+<span id="cb50-30"><a href="#cb50-30" aria-hidden="true" tabindex="-1"></a><span class="at">addCoef.col =</span> <span class="st">"black"</span>,</span>
+<span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a><span class="at">tl.col =</span> <span class="st">"black"</span>,</span>
+<span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a><span class="at">number.cex =</span> <span class="fl">0.7</span></span>
+<span id="cb50-33"><a href="#cb50-33" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="final-report_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 3. Correlation matrix showing relationships between glycemic control, lipid profile, and kidney function biomarkers.</strong></p>
+<hr>
+</section>
+<section id="relationship-between-hba1c-and-individual-lipid-markers" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="relationship-between-hba1c-and-individual-lipid-markers"><span class="header-section-number">2.3</span> Relationship Between HbA1c and Individual Lipid Markers</h2>
+<p>To further examine specific relationships identified in the correlation analysis, scatterplots were generated between HbA1c and each lipid biomarker. Linear regression lines were added to visualize the direction of association.</p>
+<hr>
+</section>
+<section id="hba1c-and-total-cholesterol" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="hba1c-and-total-cholesterol"><span class="header-section-number">2.4</span> HbA1c and Total Cholesterol</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>chol_plot <span class="ot">&lt;-</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Diabetes,</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(HbA1c,</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>           Chol)) <span class="sc">+</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_smooth</span>(</span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a><span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="at">se =</span> <span class="cn">TRUE</span></span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"HbA1c vs Total Cholesterol"</span>,</span>
+<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"HbA1c (%)"</span>,</span>
+<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"Total Cholesterol"</span></span>
+<span id="cb51-18"><a href="#cb51-18" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb51-19"><a href="#cb51-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-20"><a href="#cb51-20" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="hba1c-and-triglycerides" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="hba1c-and-triglycerides"><span class="header-section-number">2.5</span> HbA1c and Triglycerides</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>tg_plot <span class="ot">&lt;-</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Diabetes,</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(HbA1c,</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>           TG)) <span class="sc">+</span></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_smooth</span>(</span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a><span class="at">se =</span> <span class="cn">TRUE</span></span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb52-13"><a href="#cb52-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb52-15"><a href="#cb52-15" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"HbA1c vs Triglycerides"</span>,</span>
+<span id="cb52-16"><a href="#cb52-16" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"HbA1c (%)"</span>,</span>
+<span id="cb52-17"><a href="#cb52-17" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"Triglycerides"</span></span>
+<span id="cb52-18"><a href="#cb52-18" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb52-19"><a href="#cb52-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-20"><a href="#cb52-20" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="hba1c-and-hdl" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="hba1c-and-hdl"><span class="header-section-number">2.6</span> HbA1c and HDL</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>hdl_plot <span class="ot">&lt;-</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Diabetes,</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(HbA1c,</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>           HDL)) <span class="sc">+</span></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_smooth</span>(</span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="at">se =</span> <span class="cn">TRUE</span></span>
+<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"HbA1c vs HDL"</span>,</span>
+<span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"HbA1c (%)"</span>,</span>
+<span id="cb53-17"><a href="#cb53-17" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"HDL"</span></span>
+<span id="cb53-18"><a href="#cb53-18" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb53-19"><a href="#cb53-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-20"><a href="#cb53-20" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="hba1c-and-ldl" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="hba1c-and-ldl"><span class="header-section-number">2.7</span> HbA1c and LDL</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>ldl_plot <span class="ot">&lt;-</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Diabetes,</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(HbA1c,</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>           LDL)) <span class="sc">+</span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_smooth</span>(</span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a><span class="at">se =</span> <span class="cn">TRUE</span></span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"HbA1c vs LDL"</span>,</span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"HbA1c (%)"</span>,</span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"LDL"</span></span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="hba1c-and-vldl" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="hba1c-and-vldl"><span class="header-section-number">2.8</span> HbA1c and VLDL</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>vldl_plot <span class="ot">&lt;-</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Diabetes,</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(HbA1c,</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>           VLDL)) <span class="sc">+</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_smooth</span>(</span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a><span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="at">se =</span> <span class="cn">TRUE</span></span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"HbA1c vs VLDL"</span>,</span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"HbA1c (%)"</span>,</span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"VLDL"</span></span>
+<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="combined-lipid-profile-visualization" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="combined-lipid-profile-visualization"><span class="header-section-number">2.9</span> Combined Lipid Profile Visualization</h2>
+<p>To improve visualization and allow direct comparison among lipid biomarkers, individual scatterplots were combined into a single multi-panel figure.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggarrange</span>(</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>chol_plot,</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>tg_plot,</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>hdl_plot,</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>ldl_plot,</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>vldl_plot,</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="at">ncol =</span> <span class="dv">2</span>,</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a><span class="at">nrow =</span> <span class="dv">3</span></span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="final-report_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 4. Association between HbA1c and lipid profile biomarkers.</strong></p>
+<hr>
+</section>
+<section id="interpretation" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">2.10</span> Interpretation</h2>
+<p>The relationship between HbA1c and lipid biomarkers was evaluated based on correlation coefficients, scatterplot trends, and regression lines.</p>
+<p>Possible interpretations include:</p>
+<ul>
+<li>A positive association between HbA1c and cholesterol, triglycerides, LDL, or VLDL would indicate that poorer glycemic control is associated with an unfavorable lipid profile.</li>
+<li>A negative association between HbA1c and HDL would suggest that worsening glycemic control is associated with reduced protective cholesterol levels.</li>
+<li>Weak or absent associations would suggest that additional factors may contribute to lipid variation among individuals with diabetes.</li>
+</ul>
+</section>
+</section>
+<section id="research-question-3" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Research Question 3</h1>
+<section id="is-hba1c-associated-with-kidney-function" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="is-hba1c-associated-with-kidney-function"><span class="header-section-number">3.1</span> Is HbA1c associated with kidney function?</h2>
+<p>Diabetic kidney disease is one of the most common complications of diabetes and is strongly influenced by prolonged exposure to elevated blood glucose levels. Chronic hyperglycemia can contribute to renal injury through oxidative stress, inflammation, and vascular dysfunction.</p>
+<p>Serum urea and creatinine are commonly used biomarkers for evaluating kidney function. Therefore, this study examined whether HbA1c levels were associated with changes in kidney function markers.</p>
+<hr>
+</section>
+<section id="relationship-between-hba1c-and-kidney-function-biomarkers" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="relationship-between-hba1c-and-kidney-function-biomarkers"><span class="header-section-number">3.2</span> Relationship Between HbA1c and Kidney Function Biomarkers</h2>
+<p>Scatterplots with linear regression lines were generated to evaluate the association between HbA1c and kidney function markers.</p>
+<hr>
+</section>
+<section id="hba1c-and-urea" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="hba1c-and-urea"><span class="header-section-number">3.3</span> HbA1c and Urea</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>urea_plot <span class="ot">&lt;-</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Diabetes,</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(HbA1c,</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>           Urea)) <span class="sc">+</span></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_smooth</span>(</span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a><span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a><span class="at">se =</span> <span class="cn">TRUE</span></span>
+<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb58-13"><a href="#cb58-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-14"><a href="#cb58-14" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb58-15"><a href="#cb58-15" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"HbA1c vs Urea"</span>,</span>
+<span id="cb58-16"><a href="#cb58-16" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"HbA1c (%)"</span>,</span>
+<span id="cb58-17"><a href="#cb58-17" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"Urea"</span></span>
+<span id="cb58-18"><a href="#cb58-18" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb58-19"><a href="#cb58-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-20"><a href="#cb58-20" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_classic</span>()</span>
+<span id="cb58-21"><a href="#cb58-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-22"><a href="#cb58-22" aria-hidden="true" tabindex="-1"></a>urea_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="final-report_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 5A. Relationship between HbA1c and serum urea levels.</strong></p>
+<hr>
+</section>
+<section id="hba1c-and-creatinine" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="hba1c-and-creatinine"><span class="header-section-number">3.4</span> HbA1c and Creatinine</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>cr_plot <span class="ot">&lt;-</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Diabetes,</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(HbA1c,</span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>           Cr)) <span class="sc">+</span></span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_smooth</span>(</span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a><span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a><span class="at">se =</span> <span class="cn">TRUE</span></span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="st">"HbA1c vs Creatinine"</span>,</span>
+<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"HbA1c (%)"</span>,</span>
+<span id="cb60-17"><a href="#cb60-17" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="st">"Creatinine"</span></span>
+<span id="cb60-18"><a href="#cb60-18" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb60-19"><a href="#cb60-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-20"><a href="#cb60-20" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_classic</span>()</span>
+<span id="cb60-21"><a href="#cb60-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-22"><a href="#cb60-22" aria-hidden="true" tabindex="-1"></a>cr_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="final-report_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 5B. Relationship between HbA1c and serum creatinine levels.</strong></p>
+<hr>
+</section>
+<section id="combined-kidney-function-visualization" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="combined-kidney-function-visualization"><span class="header-section-number">3.5</span> Combined Kidney Function Visualization</h2>
+<p>To improve comparison between renal biomarkers, both kidney function plots were displayed together.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggarrange</span>(</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>urea_plot,</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>cr_plot,</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="at">ncol =</span> <span class="dv">2</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="final-report_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 5. Association between HbA1c and kidney function biomarkers.</strong></p>
+<hr>
+</section>
+<section id="interpretation-1" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="interpretation-1"><span class="header-section-number">3.6</span> Interpretation</h2>
+<p>The relationship between HbA1c and kidney function markers was evaluated based on the direction and strength of the regression trends.</p>
+<p>A positive association between HbA1c and urea or creatinine would suggest that worsening glycemic control is associated with poorer kidney function. This would support the hypothesis that chronic hyperglycemia contributes to renal impairment.</p>
+<p>However, weak or non-significant associations would suggest that kidney function is influenced by additional factors beyond glycemic control, including disease duration, age, medications, hypertension, and other metabolic factors.</p>
+</section>
+</section>
+<section id="research-question-4" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Research Question 4</h1>
+<section id="can-lipid-profile-and-kidney-function-biomarkers-predict-hba1c-levels" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="can-lipid-profile-and-kidney-function-biomarkers-predict-hba1c-levels"><span class="header-section-number">4.1</span> Can lipid profile and kidney function biomarkers predict HbA1c levels?</h2>
+<p>While individual correlations describe relationships between HbA1c and individual biomarkers, diabetes-related metabolic abnormalities often occur together. Therefore, a multiple linear regression model was performed to determine whether lipid profile markers and kidney function biomarkers collectively predict HbA1c levels.</p>
+<p>The model included:</p>
+<ul>
+<li>Total cholesterol (Chol)</li>
+<li>Triglycerides (TG)</li>
+<li>HDL</li>
+<li>LDL</li>
+<li>VLDL</li>
+<li>Urea</li>
+<li>Creatinine (Cr)</li>
+</ul>
+<p>HbA1c was used as the dependent variable because it represents long-term glycemic control.</p>
+<hr>
+</section>
+<section id="multiple-linear-regression-model" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="multiple-linear-regression-model"><span class="header-section-number">4.2</span> Multiple Linear Regression Model</h2>
+<p>The following model was used:</p>
+<p>[ HbA1c = _0 + _1(Chol) + _2(TG) + _3(HDL) + _4(LDL) + _5(VLDL) + _6(Urea) + _7(Cr) ]</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(</span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>HbA1c <span class="sc">~</span> Chol <span class="sc">+</span></span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>TG <span class="sc">+</span></span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>HDL <span class="sc">+</span></span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a>LDL <span class="sc">+</span></span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>VLDL <span class="sc">+</span></span>
+<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>Urea <span class="sc">+</span></span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a>Cr,</span>
+<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="at">data =</span> Diabetes</span>
+<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-15"><a href="#cb64-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-16"><a href="#cb64-16" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = HbA1c ~ Chol + TG + HDL + LDL + VLDL + Urea + Cr, 
+    data = Diabetes)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-7.7792 -1.7114 -0.1922  1.6465  8.1185 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  6.508993   0.368418  17.667  &lt; 2e-16 ***
+Chol         0.260841   0.071983   3.624 0.000305 ***
+TG           0.315635   0.060500   5.217 2.21e-07 ***
+HDL          0.094017   0.122612   0.767 0.443392    
+LDL         -0.102305   0.079767  -1.283 0.199949    
+VLDL         0.029500   0.021503   1.372 0.170414    
+Urea        -0.003176   0.033967  -0.093 0.925533    
+Cr          -0.001778   0.001665  -1.068 0.285879    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.456 on 992 degrees of freedom
+Multiple R-squared:  0.06693,   Adjusted R-squared:  0.06035 
+F-statistic: 10.17 on 7 and 992 DF,  p-value: 2.468e-12</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract regression coefficients as a table</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)<span class="sc">$</span>coefficients</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                Estimate  Std. Error     t value     Pr(&gt;|t|)
+(Intercept)  6.508992667 0.368418104 17.66740722 6.054998e-61
+Chol         0.260840807 0.071982887  3.62365025 3.052128e-04
+TG           0.315634759 0.060499555  5.21714181 2.212039e-07
+HDL          0.094016797 0.122611843  0.76678398 4.433924e-01
+LDL         -0.102305441 0.079767173 -1.28255068 1.999491e-01
+VLDL         0.029499899 0.021503403  1.37187119 1.704137e-01
+Urea        -0.003175575 0.033966907 -0.09349025 9.255330e-01
+Cr          -0.001778043 0.001665177 -1.06778038 2.858794e-01</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>normalized_model <span class="ot">&lt;-</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(</span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>HbA1c <span class="sc">~</span> Chol <span class="sc">+</span></span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>TG <span class="sc">+</span></span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a>HDL <span class="sc">+</span></span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a>LDL <span class="sc">+</span></span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a>VLDL <span class="sc">+</span></span>
+<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a>Urea <span class="sc">+</span></span>
+<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a>Cr,</span>
+<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a><span class="at">data =</span> Diabetes_normalized</span>
+<span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-15"><a href="#cb68-15" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(normalized_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = HbA1c ~ Chol + TG + HDL + LDL + VLDL + Urea + Cr, 
+    data = Diabetes_normalized)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.0699 -0.6754 -0.0758  0.6498  3.2038 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -1.445e-16  3.065e-02   0.000 1.000000    
+Chol         1.340e-01  3.698e-02   3.624 0.000305 ***
+TG           1.745e-01  3.345e-02   5.217 2.21e-07 ***
+HDL          2.450e-02  3.196e-02   0.767 0.443392    
+LDL         -4.502e-02  3.510e-02  -1.283 0.199949    
+VLDL         4.265e-02  3.109e-02   1.372 0.170414    
+Urea        -3.678e-03  3.934e-02  -0.093 0.925533    
+Cr          -4.209e-02  3.942e-02  -1.068 0.285879    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.9694 on 992 degrees of freedom
+Multiple R-squared:  0.06693,   Adjusted R-squared:  0.06035 
+F-statistic: 10.17 on 7 and 992 DF,  p-value: 2.468e-12</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="regression-model-interpretation" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="regression-model-interpretation"><span class="header-section-number">4.3</span> Regression Model Interpretation</h2>
+<p>The regression output provides several important measures:</p>
+<section id="model-fit" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="model-fit"><span class="header-section-number">4.3.1</span> Model Fit</h3>
+<p>The <strong>R-squared (R²)</strong> value represents the proportion of variation in HbA1c explained by the combined lipid and kidney biomarkers.</p>
+<p>A higher R² value indicates that the included biomarkers explain a greater proportion of differences in glycemic control among individuals.</p>
+<hr>
+</section>
+<section id="predictor-contributions" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="predictor-contributions"><span class="header-section-number">4.3.2</span> Predictor Contributions</h3>
+<p>The regression coefficients indicate the direction and magnitude of association between each biomarker and HbA1c after accounting for the influence of other variables.</p>
+<p>Interpretation:</p>
+<ul>
+<li>Positive coefficients indicate that higher biomarker levels are associated with higher HbA1c.</li>
+<li>Negative coefficients indicate an inverse relationship with HbA1c.</li>
+<li>Significant predictors (p &lt; 0.05) represent biomarkers independently associated with glycemic control after adjustment for other variables.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="summary-of-predictive-analysis" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="summary-of-predictive-analysis"><span class="header-section-number">4.4</span> Summary of Predictive Analysis</h2>
+<p>This analysis evaluates whether abnormalities in lipid metabolism and kidney function collectively contribute to differences in glycemic control.</p>
+<p>If significant predictors are identified, these findings would suggest that metabolic and renal biomarkers may provide additional information regarding diabetes severity beyond HbA1c alone.</p>
+<p>However, because this analysis is based on observational data, associations should not be interpreted as causal relationships.</p>
+<p>```</p>
+</section>
+<section id="references" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="references"><span class="header-section-number">4.5</span> References</h2>
 <p>Add any references to papers, data sources, or resources you used.</p>
 <hr>
 <p><strong>Last updated:</strong> June 2026</p>
