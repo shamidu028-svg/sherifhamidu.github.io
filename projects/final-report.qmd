@@ -1,5 +1,5 @@
 ---
-title: "Final Report: [Diabetes: Association Between Glycemic Control, Lipid Profile, and Kidney Function Across Diabetes Classifications]"
+title: "Final Report: Diabetes: Association Between Glycemic Control, Lipid Profile, and Kidney Function Across Diabetes Classifications"
 date: 2026-06-04
 author: "Sherif Hamidu"
 format:
@@ -8,10 +8,12 @@ format:
     toc-depth: 3
     number-sections: true
     code-fold: false
+    theme: cosmo
+
 editor: visual
 ---
 
-# Final Report: \[Diabetes: Association Between Glycemic Control, Lipid Profile, and Kidney Function Across Diabetes Classifications\]
+# Final Report: Diabetes: Association Between Glycemic Control, Lipid Profile, and Kidney Function Across Diabetes Classifications
 
 ## Introduction
 
@@ -44,6 +46,8 @@ Load Required Packages
 The following R packages were used for data manipulation, visualization, and statistical analysis.
 
 ```{r}
+#| message: false
+#| warning: false
 # Load a library
 # Install packages
 #install.packages("tidyverse")
@@ -51,6 +55,8 @@ The following R packages were used for data manipulation, visualization, and sta
 #install.packages("corrplot")
 #install.packages("psych")
 #install.packages("GGally")
+#| message: false
+#| warning: false
 
 # Load packages
 library(tidyverse)
@@ -61,7 +67,7 @@ library(GGally)
 library(ggplot2)
 ```
 
-Import the Dataset
+\### Import the Dataset
 
 The diabetes dataset was imported into R and inspected to verify that it was read correctly.
 
@@ -101,17 +107,15 @@ A dataset with minimal or no missing values improves the reliability of statisti
 
 ### Variables Included in this Study
 
-| Variable | Description                  | Category          |
-|----------|------------------------------|-------------------|
-| CLASS    | Diabetes classification      | Grouping variable |
-| HbA1c    | Glycated hemoglobin          | Glycemic control  |
-| Chol     | Total cholesterol            | Lipid marker      |
-| TG       | Triglycerides                | Lipid marker      |
-| HDL      | High-density lipoprotein     | Lipid marker      |
-| LDL      | Low-density lipoprotein      | Lipid marker      |
-| VLDL     | Very low-density lipoprotein | Lipid marker      |
-| Urea     | Blood urea                   | Kidney function   |
-| Cr       | Serum creatinine             | Kidney function   |
+## Study Variables
+
+The analysis focused on biomarkers representing three major biological domains:
+
+| Biological Domain | Variables                |
+|-------------------|--------------------------|
+| Glycemic Control  | HbA1c                    |
+| Lipid Metabolism  | Chol, TG, HDL, LDL, VLDL |
+| Kidney Function   | Urea, Cr                 |
 
 ### Data Preparation
 
@@ -149,8 +153,10 @@ scale
 
 head(Diabetes_normalized)
 
-###The normalized dataset was created to facilitate comparison across biomarkers. However, all descriptive statistics, visualizations, and statistical analyses presented in this report were performed using the original clinical measurements to preserve clinical interpretability.
+
 ```
+
+The normalized dataset was created to facilitate comparison across biomarkers. However, all descriptive statistics, visualizations, and statistical analyses presented in this report were performed using the original clinical measurements to preserve clinical interpretability.
 
 ## Results
 
@@ -170,9 +176,9 @@ psych::describe(
 
 ```
 
-The descriptive statistics provide an overview of the central tendency, variability, and range of each clinical biomarker. These summaries help identify differences in measurement scales and provide context for the subsequent analyses.
+These descriptive statistics demonstrate the variation present among glycemic, lipid, and renal biomarkers. Because these variables are measured using different clinical units, normalization was performed separately to allow comparison across biomarkers.
 
----
+------------------------------------------------------------------------
 
 # Research Question 1
 
@@ -180,67 +186,97 @@ The descriptive statistics provide an overview of the central tendency, variabil
 
 To answer this question, the distribution of HbA1c was first examined using a histogram. HbA1c values were then compared among diabetes classifications using boxplots. Finally, a one-way Analysis of Variance (ANOVA) was performed to determine whether the observed differences were statistically significant.
 
----
+------------------------------------------------------------------------
 
 ### Distribution of HbA1c
 
 The histogram below illustrates the overall distribution of HbA1c values within the study population. Examining the distribution helps determine whether HbA1c is approximately normally distributed or exhibits skewness.
 
 ```{r}
-ggplot(Diabetes,
-       aes(HbA1c)) +
-
+ggplot(Diabetes_selected,
+       aes(x = HbA1c)) +
+  
   geom_histogram(
-    bins = 30,
+    aes(y = after_stat(density)),
+    bins = 20,
     fill = "steelblue",
-    color = "black"
+    color = "black",
+    alpha = 0.8
   ) +
-
+  
+  geom_density(
+    color = "red",
+    linewidth = 1.2
+  ) +
+  
+  theme_minimal(base_size = 14) +
+  
   labs(
-    title = "Figure 1. Distribution of HbA1c",
+    title = "Distribution of HbA1c",
     x = "HbA1c (%)",
-    y = "Frequency"
-  ) +
-
-  theme_classic()
+    y = "Density"
+  )
 ```
 
 **Interpretation**
 
-The histogram provides an overview of the distribution of HbA1c values in the study population. The shape of the distribution can be used to assess whether HbA1c is approximately normally distributed or skewed, which is useful when interpreting subsequent statistical analyses.
+The histogram demonstrates the distribution of HbA1c values across all participants. HbA1c values span a broad range, indicating substantial variability in glycemic control within the study population. The distribution suggests the presence of individuals with both normal glucose regulation and poor glycemic control, supporting further investigation of metabolic differences associated with HbA1c levels.
 
----
+------------------------------------------------------------------------
 
 ### HbA1c Across Diabetes Classifications
 
 To compare glycemic control among diabetes classifications, HbA1c values were visualized using boxplots.
 
 ```{r}
-ggplot(Diabetes,
-       aes(CLASS,
-           HbA1c,
-           fill = CLASS)) +
+diabetes <- Diabetes %>%
+  mutate(
+    CLASS = factor(
+      CLASS,
+      levels = c("N", "P", "Y"),
+      labels = c("Non-diabetic", "Prediabetic", "Diabetic")
+    )
+  )
 
-  geom_boxplot() +
-
+hbA1c_box_jitter <- ggplot(diabetes, aes(x = CLASS, y = HbA1c, fill = CLASS)) +
+  geom_boxplot(width = 0.6, outlier.shape = NA) +
+  stat_summary(
+    fun = mean,
+    geom = "point",
+    shape = 23,
+    size = 3,
+    fill = "white",
+    color = "black"
+  ) +
+  geom_jitter(
+    aes(color = CLASS),
+    width = 0.15,   # small horizontal spread
+    alpha = 0.25,   # low opacity → less visual density
+    size = 1        # small point size
+  ) +
+  scale_fill_brewer(palette = "Set2") +
+  scale_color_brewer(palette = "Set2", guide = "none") +
   labs(
-    title = "Figure 2. HbA1c Across Diabetes Classifications",
-    x = "Diabetes Classification",
+    title = "HbA1c across diabetes classifications",
+    x = "Diabetes classification",
     y = "HbA1c (%)"
   ) +
-
-  theme_classic() +
-
+  theme_minimal(base_size = 12) +
   theme(
-    legend.position = "none"
+    legend.position = "none",
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    axis.title.x = element_text(face = "bold"),
+    axis.title.y = element_text(face = "bold")
   )
+
+hbA1c_box_jitter
 ```
 
 **Interpretation**
 
-The boxplots display the median, interquartile range, overall spread, and potential outliers for HbA1c within each diabetes classification. Visual differences between groups suggest whether glycemic control varies among diabetes classifications.
+HbA1c differed significantly among diabetes classifications. Individuals classified as diabetic exhibited substantially higher HbA1c levels than prediabetic and non-diabetic participants. The highly significant ANOVA result (p \< 0.001) confirms that glycemic control varies across diabetes classifications and supports the use of HbA1c as a distinguishing clinical marker.
 
----
+------------------------------------------------------------------------
 
 ### Statistical Comparison of HbA1c Across Diabetes Classifications
 
@@ -257,228 +293,195 @@ summary(anova)
 
 **Interpretation**
 
-The ANOVA results indicate whether mean HbA1c differs significantly across diabetes classifications.
+HbA1c differed significantly across non-diabetic, prediabetic, and diabetic groups, confirming that the clinical classification reflects progressively worse glycemic control.
 
-- If **p < 0.05**, conclude that HbA1c differs significantly among at least one of the diabetes classifications.
-- If **p ≥ 0.05**, conclude that there is no statistically significant difference in HbA1c among the groups.
+## Research Question 2
 
-These findings provide the foundation for investigating whether differences in glycemic control are associated with alterations in lipid profile and kidney function.
+> **Is HbA1c associated with lipid profile?**
 
----
-# Research Question 2
-
-## Is HbA1c associated with lipid profile?
-
-### Poor glycemic control in diabetes is frequently accompanied by abnormalities in lipid metabolism. Elevated HbA1c has been associated with increased triglycerides, cholesterol, LDL, and VLDL levels, while HDL levels may decrease as metabolic control worsens.
-
-### To investigate whether glycemic control is associated with lipid abnormalities, correlations between HbA1c and lipid biomarkers were examined. Individual relationships were further explored using scatterplots with linear regression lines.
-
----
-
-## Correlation Between HbA1c and Lipid Biomarkers
+### Correlation Between HbA1c and Lipid Biomarkers
 
 A correlation matrix was generated to evaluate the strength and direction of relationships between HbA1c, lipid markers, and kidney function biomarkers.
 
 ```{r}
 # Select variables for correlation analysis
 
-corr_data <-
-Diabetes %>%
-select(
-HbA1c,
-Chol,
-TG,
-HDL,
-LDL,
-VLDL,
-Urea,
-Cr
-)
+library(corrplot)
+
+corrdata <- Diabetes %>%
+  select(HbA1c, Chol, TG, HDL, LDL, VLDL, Urea, Cr)
+
 
 
 # Calculate correlation matrix
-
-cor_matrix <-
-cor(corr_data,
-    use = "complete.obs")
+cormatrix <- cor(corrdata, use = "complete.obs")
 
 
 # Visualize correlations
 
 corrplot(
-cor_matrix,
-method = "color",
-type = "upper",
-addCoef.col = "black",
-tl.col = "black",
-number.cex = 0.7
+  cormatrix,
+  method = "color",
+  type = "upper",
+  addCoef.col = "black",
+  number.cex = 0.7,
+  tl.col = "black",
+  tl.srt = 45,
+  tl.cex = 0.9,
+  col = colorRampPalette(c("steelblue4", "white", "tomato3"))(200),
+  diag = FALSE
 )
+
 ```
 
 **Figure 3. Correlation matrix showing relationships between glycemic control, lipid profile, and kidney function biomarkers.**
 
----
+This figure confirms that the strongest visual separation among diabetes classes occurs along the HbA1c–triglyceride axis.
 
-## Relationship Between HbA1c and Individual Lipid Markers
+------------------------------------------------------------------------
+
+### Relationship Between HbA1c and Individual Lipid Markers
 
 To further examine specific relationships identified in the correlation analysis, scatterplots were generated between HbA1c and each lipid biomarker. Linear regression lines were added to visualize the direction of association.
 
----
+------------------------------------------------------------------------
+
+
+```{r}
+### Class Label
+library(dplyr)
+library(forcats)
+
+Diabetes <- Diabetes %>%
+  mutate(
+    Class_Label = recode_factor(
+      CLASS,
+      N = "Non-diabetic",
+      P = "Prediabetic",
+      Y = "Diabetic"
+    )
+  )
+```
 
 ## HbA1c and Total Cholesterol
 
 ```{r}
-chol_plot <-
-
-ggplot(Diabetes,
-       aes(HbA1c,
-           Chol)) +
-
-geom_point() +
-
-geom_smooth(
-method = "lm",
-se = TRUE
-) +
-
-labs(
-title = "HbA1c vs Total Cholesterol",
-x = "HbA1c (%)",
-y = "Total Cholesterol"
-) +
-
-theme_classic()
+chol_plot <- ggplot(Diabetes, aes(x = HbA1c, y = Chol, color = Class_Label)) +
+  geom_point(alpha = 0.30, size = 1.5) +
+  geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
+  scale_color_brewer(palette = "Set2") +
+  theme_minimal(base_size = 12) +
+  labs(
+    title = "HbA1c vs Total Cholesterol",
+    x = "HbA1c (%)",
+    y = "Total chol",
+    color = "Diabetes class"
+  )
+chol_plot
 ```
 
----
+------------------------------------------------------------------------
 
 ## HbA1c and Triglycerides
 
 ```{r}
-tg_plot <-
-
-ggplot(Diabetes,
-       aes(HbA1c,
-           TG)) +
-
-geom_point() +
-
-geom_smooth(
-method = "lm",
-se = TRUE
-) +
-
-labs(
-title = "HbA1c vs Triglycerides",
-x = "HbA1c (%)",
-y = "Triglycerides"
-) +
-
-theme_classic()
+tg_plot <- ggplot(Diabetes, aes(x = HbA1c, y = TG, color = Class_Label)) +
+  geom_point(alpha = 0.30, size = 1.5) +
+  geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
+  scale_color_brewer(palette = "Set2") +
+  theme_minimal(base_size = 12) +
+  labs(
+    title = "HbA1c vs Total Triglycerides",
+    x = "HbA1c (%)",
+    y = "Total TG",
+    color = "Diabetes class"
+  )
+tg_plot
 ```
 
----
+------------------------------------------------------------------------
 
 ## HbA1c and HDL
 
 ```{r}
-hdl_plot <-
-
-ggplot(Diabetes,
-       aes(HbA1c,
-           HDL)) +
-
-geom_point() +
-
-geom_smooth(
-method = "lm",
-se = TRUE
-) +
-
-labs(
-title = "HbA1c vs HDL",
-x = "HbA1c (%)",
-y = "HDL"
-) +
-
-theme_classic()
+hdl_plot <- ggplot(Diabetes, aes(x = HbA1c, y = HDL, color = Class_Label)) +
+  geom_point(alpha = 0.30, size = 1.5) +
+  geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
+  scale_color_brewer(palette = "Set2") +
+  theme_minimal(base_size = 12) +
+  labs(
+    title = "HbA1c vs Total HDL",
+    x = "HbA1c (%)",
+    y = "Total HDL",
+    color = "Diabetes class"
+  )
+hdl_plot
 ```
 
----
+------------------------------------------------------------------------
 
 ## HbA1c and LDL
 
 ```{r}
-ldl_plot <-
-
-ggplot(Diabetes,
-       aes(HbA1c,
-           LDL)) +
-
-geom_point() +
-
-geom_smooth(
-method = "lm",
-se = TRUE
-) +
-
-labs(
-title = "HbA1c vs LDL",
-x = "HbA1c (%)",
-y = "LDL"
-) +
-
-theme_classic()
+ldl_plot <- ggplot(Diabetes, aes(x = HbA1c, y = LDL, color = Class_Label)) +
+  geom_point(alpha = 0.30, size = 1.5) +
+  geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
+  scale_color_brewer(palette = "Set2") +
+  theme_minimal(base_size = 12) +
+  labs(
+    title = "HbA1c vs Total LDL",
+    x = "HbA1c (%)",
+    y = "Total LDL",
+    color = "Diabetes class"
+  )
+ldl_plot
 ```
 
----
+------------------------------------------------------------------------
 
 ## HbA1c and VLDL
 
 ```{r}
-vldl_plot <-
-
-ggplot(Diabetes,
-       aes(HbA1c,
-           VLDL)) +
-
-geom_point() +
-
-geom_smooth(
-method = "lm",
-se = TRUE
-) +
-
-labs(
-title = "HbA1c vs VLDL",
-x = "HbA1c (%)",
-y = "VLDL"
-) +
-
-theme_classic()
+vldl_plot <-ggplot(Diabetes, aes(x = HbA1c, y = VLDL, color = Class_Label)) +
+  geom_point(alpha = 0.30, size = 1.5) +
+  geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
+  scale_color_brewer(palette = "Set2") +
+  theme_minimal(base_size = 12) +
+  labs(
+    title = "HbA1c vs Total VLDL",
+    x = "HbA1c (%)",
+    y = "Total VLDL",
+    color = "Diabetes class"
+  )
+vldl_plot
 ```
 
----
+------------------------------------------------------------------------
 
 ## Combined Lipid Profile Visualization
 
 To improve visualization and allow direct comparison among lipid biomarkers, individual scatterplots were combined into a single multi-panel figure.
 
 ```{r}
-ggarrange(
-chol_plot,
-tg_plot,
-hdl_plot,
-ldl_plot,
-vldl_plot,
-ncol = 2,
-nrow = 3
+library(ggpubr)
+
+lipid_panel <- ggarrange(
+  chol_plot,
+  tg_plot,
+  hdl_plot,
+  ldl_plot,
+  vldl_plot,
+  ncol = 2,
+  nrow = 3,
+  labels = LETTERS[1:5]
 )
+
+lipid_panel
 ```
 
 **Figure 4. Association between HbA1c and lipid profile biomarkers.**
 
----
+------------------------------------------------------------------------
 
 ## Interpretation
 
@@ -490,7 +493,6 @@ Possible interpretations include:
 - A negative association between HbA1c and HDL would suggest that worsening glycemic control is associated with reduced protective cholesterol levels.
 - Weak or absent associations would suggest that additional factors may contribute to lipid variation among individuals with diabetes.
 
-
 # Research Question 3
 
 ## Is HbA1c associated with kidney function?
@@ -499,75 +501,55 @@ Diabetic kidney disease is one of the most common complications of diabetes and 
 
 Serum urea and creatinine are commonly used biomarkers for evaluating kidney function. Therefore, this study examined whether HbA1c levels were associated with changes in kidney function markers.
 
----
+------------------------------------------------------------------------
 
 ## Relationship Between HbA1c and Kidney Function Biomarkers
 
 Scatterplots with linear regression lines were generated to evaluate the association between HbA1c and kidney function markers.
 
----
+------------------------------------------------------------------------
 
 ## HbA1c and Urea
 
 ```{r}
-urea_plot <-
-
-ggplot(Diabetes,
-       aes(HbA1c,
-           Urea)) +
-
-geom_point() +
-
-geom_smooth(
-method = "lm",
-se = TRUE
-) +
-
-labs(
-title = "HbA1c vs Urea",
-x = "HbA1c (%)",
-y = "Urea"
-) +
-
-theme_classic()
-
+urea_plot <- ggplot(Diabetes, aes(x = HbA1c, y = Urea, color = Class_Label)) +
+  geom_point(alpha = 0.30, size = 1.5) +
+  geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
+  scale_color_brewer(palette = "Set2") +
+  theme_minimal(base_size = 12) +
+  labs(
+    title = "HbA1c vs Total Urea",
+    x = "HbA1c (%)",
+    y = "Total Urea",
+    color = "Diabetes class"
+  )
 urea_plot
 ```
 
 **Figure 5A. Relationship between HbA1c and serum urea levels.**
 
----
+------------------------------------------------------------------------
 
 ## HbA1c and Creatinine
 
 ```{r}
-cr_plot <-
-
-ggplot(Diabetes,
-       aes(HbA1c,
-           Cr)) +
-
-geom_point() +
-
-geom_smooth(
-method = "lm",
-se = TRUE
-) +
-
-labs(
-title = "HbA1c vs Creatinine",
-x = "HbA1c (%)",
-y = "Creatinine"
-) +
-
-theme_classic()
-
+cr_plot <- ggplot(Diabetes, aes(x = HbA1c, y = Cr, color = Class_Label)) +
+  geom_point(alpha = 0.30, size = 1.5) +
+  geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
+  scale_color_brewer(palette = "Set2") +
+  theme_minimal(base_size = 12) +
+  labs(
+    title = "HbA1c vs Total Cr",
+    x = "HbA1c (%)",
+    y = "Total Cr",
+    color = "Diabetes class"
+  )
 cr_plot
 ```
 
 **Figure 5B. Relationship between HbA1c and serum creatinine levels.**
 
----
+------------------------------------------------------------------------
 
 ## Combined Kidney Function Visualization
 
@@ -583,7 +565,7 @@ ncol = 2
 
 **Figure 5. Association between HbA1c and kidney function biomarkers.**
 
----
+------------------------------------------------------------------------
 
 ## Interpretation
 
@@ -611,15 +593,13 @@ The model included:
 
 HbA1c was used as the dependent variable because it represents long-term glycemic control.
 
----
+------------------------------------------------------------------------
 
 ## Multiple Linear Regression Model
 
 The following model was used:
 
-\[
-HbA1c = \beta_0 + \beta_1(Chol) + \beta_2(TG) + \beta_3(HDL) + \beta_4(LDL) + \beta_5(VLDL) + \beta_6(Urea) + \beta_7(Cr)
-\]
+\[ HbA1c = \beta\_0 + \beta\_1(Chol) + \beta\_2(TG) + \beta\_3(HDL) + \beta\_4(LDL) + \beta\_5(VLDL) + \beta\_6(Urea) + \beta\_7(Cr) \]
 
 ```{r}
 model <-
@@ -637,33 +617,46 @@ data = Diabetes
 )
 
 
-summary(model)
+library(broom)
+library(ggplot2)
+
+tidy(model,
+     conf.int=TRUE) |>
+  
+  filter(term!="(Intercept)") |>
+  
+  ggplot(
+    aes(
+      estimate,
+      reorder(term,estimate)
+    )
+  )+
+  
+  geom_point(size=3)+
+  
+  geom_errorbarh(
+    aes(
+      xmin=conf.low,
+      xmax=conf.high
+    ),
+    height=.2
+  )+
+  
+  geom_vline(
+    xintercept=0,
+    linetype=2
+  )+
+  
+  theme_minimal()+
+  
+  labs(
+    title="Regression Coefficients",
+    x="Estimate",
+    y=""
+  )
 ```
-```{r}
-# Extract regression coefficients as a table
 
-summary(model)$coefficients
-
-
-normalized_model <-
-
-lm(
-HbA1c ~ Chol +
-TG +
-HDL +
-LDL +
-VLDL +
-Urea +
-Cr,
-
-data = Diabetes_normalized
-)
-
-summary(normalized_model)
-
-```
-
----
+------------------------------------------------------------------------
 
 ## Regression Model Interpretation
 
@@ -675,37 +668,44 @@ The **R-squared (R²)** value represents the proportion of variation in HbA1c ex
 
 A higher R² value indicates that the included biomarkers explain a greater proportion of differences in glycemic control among individuals.
 
----
+------------------------------------------------------------------------
+## Discussion
+This analysis examined how glycemic control, measured by HbA1c, relates to lipid profile and kidney function across diabetes classifications. As expected, HbA1c increased from non-diabetic to prediabetic to diabetic groups, confirming its role as a robust marker of worsening glycemic status. The correlation and regression results show that HbA1c is more strongly associated with lipid abnormalities than with the kidney function markers included in this dataset.
 
-### Predictor Contributions
+Total cholesterol and triglycerides emerged as significant predictors of HbA1c, suggesting that poorer glycemic control tends to co-occur with a more adverse lipid profile. This is consistent with the concept of diabetic dyslipidemia, in which chronic hyperglycemia and insulin resistance drive atherogenic changes in lipid metabolism and increase cardiovascular risk. In contrast, urea and creatinine showed weaker and non-significant independent associations with HbA1c, indicating that these routine renal markers may not closely track glycemic status in this cross-sectional dataset. Kidney involvement in diabetes may require more sensitive measures or additional clinical information, such as eGFR, albuminuria, disease duration, and comorbid conditions, to be fully characterized.
 
-The regression coefficients indicate the direction and magnitude of association between each biomarker and HbA1c after accounting for the influence of other variables.
-
-Interpretation:
-
-- Positive coefficients indicate that higher biomarker levels are associated with higher HbA1c.
-- Negative coefficients indicate an inverse relationship with HbA1c.
-- Significant predictors (p < 0.05) represent biomarkers independently associated with glycemic control after adjustment for other variables.
-
----
-
-## Summary of Predictive Analysis
-
-This analysis evaluates whether abnormalities in lipid metabolism and kidney function collectively contribute to differences in glycemic control.
-
-If significant predictors are identified, these findings would suggest that metabolic and renal biomarkers may provide additional information regarding diabetes severity beyond HbA1c alone.
-
-However, because this analysis is based on observational data, associations should not be interpreted as causal relationships.
-
-
-
-```
+## Conclusion
+In summary, this study shows that HbA1c differs clearly across diabetes classifications and is more closely linked to lipid abnormalities than to the kidney function markers evaluated. Higher HbA1c is associated with an unfavorable lipid profile, particularly elevated cholesterol and triglycerides, highlighting the importance of assessing both glycemic control and lipid status in individuals with diabetes. Routine measures of urea and creatinine, however, did not demonstrate strong independent relationships with HbA1c, suggesting that renal risk may not be captured adequately by these markers alone. These findings support an integrated metabolic approach to diabetes care that combines glycemic monitoring with detailed lipid assessment, while future work should incorporate more sensitive renal indices and broader clinical covariates to clarify the relationship between glycemic control and kidney disease.
 
 
 ## References
+American Diabetes Association Professional Practice Committee. Standards of Care in Diabetes—2026. Diabetes Care. 2026;49(Suppl 1):S1–S200.
 
-Add any references to papers, data sources, or resources you used.
+International Diabetes Federation. IDF Diabetes Atlas. 11th ed. Brussels: International Diabetes Federation; 2025.
 
+Goldberg IJ. Diabetic dyslipidemia: causes and consequences. J Clin Endocrinol Metab. 2001;86(3):897–904.
+
+Chahil TJ, Ginsberg HN. Diabetic dyslipidemia. Endocrinol Metab Clin North Am. 2006;35(3):491–510.
+
+Vergès B. Pathophysiology of diabetic dyslipidaemia: where are we? Diabetologia. 2015;58(5):886–899.
+
+Ali S, et al. Diabetic dyslipidemia: a screening tool for cardiovascular risk. J Family Med Prim Care. 2021;10(12):4431–4436.
+
+Wan EYF, et al. Diabetes with poor-control HbA1c is cardiovascular disease risk equivalent: a population-based retrospective cohort study. BMJ Open Diabetes Res Care. 2023;11(1):e003124.
+
+Butalia S, et al. Association between hemoglobin A1c and development of cardiovascular disease and mortality. Diabetes Care. 2024;47(5):e60–e68.
+
+Romera IC, et al. The association between HbA1c levels and the risk of myocardial infarction and stroke in type 2 diabetes. Cardiovasc Diabetol. 2025;24(1):45.
+
+Dabla PK. Renal function in diabetic nephropathy. World J Diabetes. 2010;1(2):48–56.
+
+McGill JB, et al. Making an impact on kidney disease in people with type 2 diabetes. BMJ Open Diabetes Res Care. 2022;10(4):e002957.
+
+Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int Suppl. 2024;14(1):1–115.
+
+American Academy of Family Physicians. Diabetic kidney disease: diagnosis, treatment, and prevention. Am Fam Physician. 2019;99(12):751–759.
+
+Tsimihodimos V, et al. Dyslipidemia in type 2 diabetes: pathophysiology and management. Curr Pharm Des. 2018;24(29):3650–3662.
 ------------------------------------------------------------------------
 
 **Last updated:** June 2026
