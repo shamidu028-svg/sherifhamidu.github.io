@@ -366,6 +366,8 @@ Diabetes <- Diabetes %>%
 ## HbA1c and Total Cholesterol
 
 ```{r}
+#| message: false
+#| warning: false
 chol_plot <- ggplot(Diabetes, aes(x = HbA1c, y = Chol, color = Class_Label)) +
   geom_point(alpha = 0.30, size = 1.5) +
   geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
@@ -385,6 +387,8 @@ chol_plot
 ## HbA1c and Triglycerides
 
 ```{r}
+#| message: false
+#| warning: false
 tg_plot <- ggplot(Diabetes, aes(x = HbA1c, y = TG, color = Class_Label)) +
   geom_point(alpha = 0.30, size = 1.5) +
   geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
@@ -404,6 +408,8 @@ tg_plot
 ## HbA1c and HDL
 
 ```{r}
+#| message: false
+#| warning: false
 hdl_plot <- ggplot(Diabetes, aes(x = HbA1c, y = HDL, color = Class_Label)) +
   geom_point(alpha = 0.30, size = 1.5) +
   geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
@@ -423,6 +429,8 @@ hdl_plot
 ## HbA1c and LDL
 
 ```{r}
+#| message: false
+#| warning: false
 ldl_plot <- ggplot(Diabetes, aes(x = HbA1c, y = LDL, color = Class_Label)) +
   geom_point(alpha = 0.30, size = 1.5) +
   geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
@@ -442,6 +450,8 @@ ldl_plot
 ## HbA1c and VLDL
 
 ```{r}
+#| message: false
+#| warning: false
 vldl_plot <-ggplot(Diabetes, aes(x = HbA1c, y = VLDL, color = Class_Label)) +
   geom_point(alpha = 0.30, size = 1.5) +
   geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
@@ -512,6 +522,8 @@ Scatterplots with linear regression lines were generated to evaluate the associa
 ## HbA1c and Urea
 
 ```{r}
+#| message: false
+#| warning: false
 urea_plot <- ggplot(Diabetes, aes(x = HbA1c, y = Urea, color = Class_Label)) +
   geom_point(alpha = 0.30, size = 1.5) +
   geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
@@ -533,6 +545,9 @@ urea_plot
 ## HbA1c and Creatinine
 
 ```{r}
+#| message: false
+#| warning: false
+#| paged-print: false
 cr_plot <- ggplot(Diabetes, aes(x = HbA1c, y = Cr, color = Class_Label)) +
   geom_point(alpha = 0.30, size = 1.5) +
   geom_smooth(method = "lm", se = TRUE, linewidth = 1) +
@@ -602,6 +617,8 @@ The following model was used:
 \[ HbA1c = \beta\_0 + \beta\_1(Chol) + \beta\_2(TG) + \beta\_3(HDL) + \beta\_4(LDL) + \beta\_5(VLDL) + \beta\_6(Urea) + \beta\_7(Cr) \]
 
 ```{r}
+#| message: false
+#| warning: false
 model <-
 
 lm(
@@ -668,19 +685,19 @@ The **R-squared (R²)** value represents the proportion of variation in HbA1c ex
 
 A higher R² value indicates that the included biomarkers explain a greater proportion of differences in glycemic control among individuals.
 
-------------------------------------------------------------------------
+
 ## Discussion
 
 This analysis examined how glycemic control, measured by HbA1c, relates to lipid profile and kidney function across diabetes classifications. As expected, HbA1c increased from non-diabetic to prediabetic to diabetic groups, confirming its role as a robust marker of worsening glycemic status. The correlation and regression results show that HbA1c is more strongly associated with lipid abnormalities than with the kidney function markers included in this dataset.
 
 Total cholesterol and triglycerides emerged as significant predictors of HbA1c, suggesting that poorer glycemic control tends to co-occur with a more adverse lipid profile. This is consistent with the concept of diabetic dyslipidemia, in which chronic hyperglycemia and insulin resistance drive atherogenic changes in lipid metabolism and increase cardiovascular risk. In contrast, urea and creatinine showed weaker and non-significant independent associations with HbA1c, indicating that these routine renal markers may not closely track glycemic status in this cross-sectional dataset. Kidney involvement in diabetes may require more sensitive measures or additional clinical information, such as eGFR, albuminuria, disease duration, and comorbid conditions, to be fully characterized.
 
-------------------------------------------------------------------------
+
 ## Conclusion
 
 In summary, this study shows that HbA1c differs clearly across diabetes classifications and is more closely linked to lipid abnormalities than to the kidney function markers evaluated. Higher HbA1c is associated with an unfavorable lipid profile, particularly elevated cholesterol and triglycerides, highlighting the importance of assessing both glycemic control and lipid status in individuals with diabetes. Routine measures of urea and creatinine, however, did not demonstrate strong independent relationships with HbA1c, suggesting that renal risk may not be captured adequately by these markers alone. These findings support an integrated metabolic approach to diabetes care that combines glycemic monitoring with detailed lipid assessment, while future work should incorporate more sensitive renal indices and broader clinical covariates to clarify the relationship between glycemic control and kidney disease.
 
-------------------------------------------------------------------------
+
 ## References
 1. American Diabetes Association Professional Practice Committee. Standards of Care in Diabetes—2026. Diabetes Care. 2026;49(Suppl 1):S1–S200.
 
@@ -709,6 +726,6 @@ In summary, this study shows that HbA1c differs clearly across diabetes classifi
 13. American Academy of Family Physicians. Diabetic kidney disease: diagnosis, treatment, and prevention. Am Fam Physician. 2019;99(12):751–759.
 
 14. Tsimihodimos V, et al. Dyslipidemia in type 2 diabetes: pathophysiology and management. Curr Pharm Des. 2018;24(29):3650–3662.
-------------------------------------------------------------------------
+
 
 **Last updated:** June 2026
